@@ -11,11 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <body className="min-h-screen flex flex-col">
-        <Navbar />
         <div className="flex-grow">
           {children}
         </div>
-        <Footer />
       </body>
     </html>
   );
