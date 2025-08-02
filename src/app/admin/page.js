@@ -41,7 +41,15 @@ import {
   Layers,
   Tag,
   Grid3X3,
-  Globe
+  Globe,
+  LogOut,
+  MessageSquare,
+  Star,
+  ThumbsUp,
+  UserCheck,
+  Image,
+  FilePlus,
+  Heart
 } from 'lucide-react';
 
 export default function AdminDashboard() {
@@ -90,33 +98,44 @@ export default function AdminDashboard() {
       title: 'Workshop SMK PPK-BLUD di SMKN 2 Depok Sleman',
       date: '12 Juli 2025',
       status: 'Published',
-      views: 1240
+      views: 1240,
+      author: 'Admin BLUD'
     },
     {
       id: 2,
       title: 'Produksi Barang dan Jasa BLUD SMK Tahun 2025',
       date: '5 Juli 2025',
       status: 'Published',
-      views: 987
+      views: 987,
+      author: 'Admin BLUD'
     },
     {
       id: 3,
       title: 'Kerjasama BLUD SMK dengan 5 Industri Terkemuka',
       date: '28 Juni 2025',
       status: 'Draft',
-      views: 0
+      views: 0,
+      author: 'Admin BLUD'
+    },
+    {
+      id: 4,
+      title: 'Pelatihan Digital Marketing untuk UMKM',
+      date: '20 Juni 2025',
+      status: 'Published',
+      views: 845,
+      author: 'Admin BLUD'
     }
   ];
 
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
     { id: 'berita', label: 'Kelola Berita', icon: FileText },
-    { id: 'siswa', label: 'Data Siswa', icon: Users },
     { id: 'program-keahlian', label: 'Program Keahlian', icon: GraduationCap },
     { id: 'produk-jasa', label: 'Produk & Jasa', icon: Package },
     { id: 'kerjasama', label: 'Kerjasama', icon: Building2 },
-    { id: 'keuangan', label: 'Laporan Keuangan', icon: DollarSign },
-    { id: 'settings', label: 'Pengaturan', icon: Settings }
+    { id: 'unduhan', label: 'File Unduhan', icon: Download },
+    { id: 'review', label: 'Pesan & Review', icon: MessageSquare },
+    { id: 'keuangan', label: 'Laporan Keuangan', icon: DollarSign }
   ];
 
   const quickActions = [
@@ -228,7 +247,7 @@ export default function AdminDashboard() {
           
           {/* User Profile */}
           <div className="p-4 border-t border-gray-200">
-            <div className="flex items-center space-x-3 p-3 rounded-xl bg-gray-50">
+            <div className="flex items-center space-x-3 p-3 rounded-xl bg-gray-50 mb-3">
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                 <span className="text-white text-sm font-semibold">A</span>
               </div>
@@ -237,6 +256,10 @@ export default function AdminDashboard() {
                 <p className="text-xs text-gray-500">Super Administrator</p>
               </div>
             </div>
+            <button className="w-full flex items-center justify-center space-x-2 px-4 py-2 text-red-600 hover:bg-red-50 rounded-xl transition-colors">
+              <LogOut className="h-4 w-4" />
+              <span className="text-sm font-medium">Logout</span>
+            </button>
           </div>
         </div>
       </div>
