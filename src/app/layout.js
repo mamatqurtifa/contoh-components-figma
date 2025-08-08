@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
         <div className="flex-grow">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
